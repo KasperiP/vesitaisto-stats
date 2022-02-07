@@ -27,7 +27,7 @@ const Kd: NextPage = () => {
 			</Head>
 			<Navbar />
 			<LargeTable
-				name="Tapot"
+				name="KD"
 				sortBy="kd"
 				current={current}
 				setCurrent={setCurrent}

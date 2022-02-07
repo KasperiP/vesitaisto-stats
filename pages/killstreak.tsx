@@ -27,7 +27,7 @@ const Killstreak: NextPage = () => {
 			</Head>
 			<Navbar />
 			<LargeTable
-				name="Tapot"
+				name="Tappoputki"
 				sortBy="killstreakrecord"
 				current={current}
 				setCurrent={setCurrent}

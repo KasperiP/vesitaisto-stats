@@ -27,7 +27,7 @@ const Levelrecord: NextPage = () => {
 			</Head>
 			<Navbar />
 			<LargeTable
-				name="Tapot"
+				name="Tasoennätys"
 				sortBy="levelrecord"
 				current={current}
 				setCurrent={setCurrent}

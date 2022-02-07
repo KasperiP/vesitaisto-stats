@@ -27,7 +27,7 @@ const Deaths: NextPage = () => {
 			</Head>
 			<Navbar />
 			<LargeTable
-				name="Tapot"
+				name="Kuolemat"
 				sortBy="deaths"
 				current={current}
 				setCurrent={setCurrent}
