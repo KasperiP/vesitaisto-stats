@@ -1,0 +1,42 @@
+.navbar {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0 50px;
+}
+
+.navbar div {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.navbar img {
+	cursor: pointer;
+}
+
+.navbar h1 {
+	color: #5a5c69;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.navbar button {
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: var(--blue);
+	color: var(--white);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		flex-direction: column;
+		padding: 10px;
+	}
+}

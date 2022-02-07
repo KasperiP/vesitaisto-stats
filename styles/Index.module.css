@@ -1,0 +1,96 @@
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-gap: 20px;
+	padding: 0 50px 50px;
+}
+
+.listContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.listItem {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+	height: 40px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: 1px solid #e3e6f09e;
+	border-radius: 5px;
+	background-color: var(--white);
+	color: #858796;
+}
+
+.listItemNav {
+	background-color: var(--blue);
+	color: var(--white);
+	font-weight: 700;
+	text-align: left;
+}
+
+.imgContainer {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+
+.listItemLarge {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.listItemSmall {
+	display: flex;
+	align-items: center;
+	width: 100px;
+	height: 100%;
+}
+
+.listItem :first-child {
+	justify-content: center;
+}
+
+.btnContainer {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.btnContainer a {
+	display: flex;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--blue);
+	color: var(--white);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.loading {
+	display: flex;
+	width: 100%;
+	height: 30%;
+	border-radius: 20px;
+	background-color: rgb(128 128 128 / 6.3%);
+}
+
+@media screen and (max-width: 1200px) {
+	.gridContainer {
+		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.gridContainer {
+		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+	}
+}
