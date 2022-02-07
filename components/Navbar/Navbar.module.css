@@ -39,4 +39,9 @@
 		flex-direction: column;
 		padding: 10px;
 	}
+
+	.navbar div {
+		flex-direction: column;
+		gap: 0;
+	}
 }
