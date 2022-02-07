@@ -8,6 +8,7 @@
 }
 
 .listItemTitle {
+	border: none !important;
 	background-color: var(--blue) !important;
 	color: #fff !important;
 	font-weight: 700 !important;
