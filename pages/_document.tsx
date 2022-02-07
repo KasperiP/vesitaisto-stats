@@ -47,10 +47,10 @@ export default function Document() {
 				/>
 				<meta property="og:title" content="Motimaa.net - vesitaisto" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.kassq.dev" />
+				<meta property="og:url" content="https://www.motimaa.net" />
 				<meta
 					property="og:image"
-					content="https://www.kassq.dev/logo.webp"
+					content="https://www.motimaa.net/logo.webp"
 				/>
 				<meta
 					property="og:description"

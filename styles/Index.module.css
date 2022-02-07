@@ -26,6 +26,7 @@
 }
 
 .listItemNav {
+	border: none;
 	background-color: var(--blue);
 	color: var(--white);
 	font-weight: 700;
