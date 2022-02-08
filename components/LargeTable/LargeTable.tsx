@@ -55,12 +55,11 @@ const LargeTable = ({ name, sortBy, current, setCurrent, data }: Props) => {
 
 											<p className={styles.listItemSmall}>
 												{sortBy === 'kd'
-													? (player.kills +
-															player.deaths >
-													  0
-															? player.kills /
-															  player.deaths
-															: 0
+													? (
+															player.kills /
+															(player.deaths > 1
+																? player.deaths
+																: 1)
 													  )
 															.toFixed(2)
 															.replace(

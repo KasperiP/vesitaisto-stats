@@ -43,7 +43,10 @@ const Home: NextPage = () => {
 						</div>
 						<p className={styles.listItemSmall}>
 							{key === 'kd'
-								? (item.kills / item.deaths)
+								? (
+										item.kills /
+										(item.deaths > 1 ? item.deaths : 1)
+								  )
 										.toFixed(2)
 										.replace(/[.,]00$/, '')
 								: item[key]}
