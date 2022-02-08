@@ -50,7 +50,7 @@ const LargeTable = ({ name, sortBy, current, setCurrent, data }: Props) => {
 													height={20}
 													alt="Image"
 												></Image>
-												<p>kassq</p>
+												<p>{player.player_name}</p>
 											</div>
 
 											<p className={styles.listItemSmall}>

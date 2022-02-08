@@ -28,6 +28,9 @@ export const connect = async () => {
 		levelrecord: {
 			type: Number,
 		},
+		player_name: {
+			type: String,
+		},
 	});
 
 	const Players =

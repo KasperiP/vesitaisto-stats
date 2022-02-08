@@ -6,6 +6,7 @@ export type Player = {
 	killstreak: number;
 	killstreakrecord: number;
 	levelrecord: number;
+	player_name: string;
 };
 
 export type StatsResponse = {

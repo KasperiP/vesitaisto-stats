@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 								height={20}
 								alt="Image"
 							></Image>
-							<p>kassq</p>
+							<p>{item.player_name}</p>
 						</div>
 						<p className={styles.listItemSmall}>
 							{key === 'kd'
