@@ -10,7 +10,7 @@
 .listItemTitle {
 	border: none !important;
 	background-color: var(--blue) !important;
-	color: #fff !important;
+	color: var(--text) !important;
 	font-weight: 700 !important;
 	text-align: left !important;
 }
@@ -29,9 +29,9 @@
 	height: 40px;
 	padding-right: 10px;
 	padding-left: 10px;
-	border: 1px solid #e3e6f09e;
+	border: 1px solid var(--border);
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: var(--white);
 	color: #858796;
 }
 

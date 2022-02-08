@@ -22,8 +22,6 @@ const Home: NextPage = () => {
 		fetcher
 	);
 
-	if (error) return <div>Failed to load</div>;
-
 	type Key = 'kills' | 'deaths' | 'killstreakrecord' | 'kd' | 'levelrecord';
 
 	const renderStats = (key: Key) => {

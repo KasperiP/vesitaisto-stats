@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -13,6 +14,14 @@ const Navbar = () => {
 		setTimeout(() => {
 			setCopied(false);
 		}, 2000);
+	};
+	const { theme, setTheme } = useTheme();
+	const handleThemeChange = () => {
+		if (theme === 'light') {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
 	};
 
 	return (
@@ -39,9 +48,14 @@ const Navbar = () => {
 						/>
 					</div>
 				</Link>
-				<button onClick={handleCopy}>
-					{copied ? 'Kopioitu!' : 'IP: motimaa.net'}
-				</button>
+				<span>
+					<button onClick={handleThemeChange}>
+						Teema: {theme === 'dark' ? 'tumma' : 'vaalea'}
+					</button>
+					<button onClick={handleCopy}>
+						{copied ? 'Kopioitu!' : 'IP: motimaa.net'}
+					</button>
+				</span>
 			</div>
 		</nav>
 	);
