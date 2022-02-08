@@ -29,6 +29,16 @@ const Navbar = () => {
 				</div>
 			</Link>
 			<div>
+				<Link href="https://github.com/KasperiP" passHref>
+					<div className={styles.imgContainer}>
+						<Image
+							src="/github.svg"
+							layout="fill"
+							objectFit="contain"
+							alt="Github logo"
+						/>
+					</div>
+				</Link>
 				<button onClick={handleCopy}>
 					{copied ? 'Kopioitu!' : 'IP: motimaa.net'}
 				</button>
