@@ -50,6 +50,10 @@
 	height: 100%;
 }
 
+.listItemLarge img {
+	background-color: rgb(128 128 128 / 6.3%);
+}
+
 .paginationContainer {
 	display: flex;
 	justify-content: left;

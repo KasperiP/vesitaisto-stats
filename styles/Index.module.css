@@ -39,6 +39,10 @@
 	height: 20px;
 }
 
+.imgContainer img {
+	background-color: rgb(128 128 128 / 6.3%);
+}
+
 .listItemLarge {
 	display: flex;
 	gap: 10px;
