@@ -47,10 +47,9 @@ export default function Document() {
 				/>
 				<meta property="og:title" content="Motimaa.net - vesitaisto" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.motimaa.net" />
 				<meta
-					property="og:image"
-					content="https://www.motimaa.net/logo.webp"
+					property="og:url"
+					content="https://vesitaisto.motimaa.net"
 				/>
 				<meta
 					property="og:description"

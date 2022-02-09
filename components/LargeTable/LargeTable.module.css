@@ -9,7 +9,7 @@
 
 .listItemTitle {
 	border: none !important;
-	background-color: var(--blue) !important;
+	background-color: var(--highlight) !important;
 	color: var(--text) !important;
 	font-weight: 700 !important;
 	text-align: left !important;
@@ -31,7 +31,7 @@
 	padding-left: 10px;
 	border: 1px solid var(--border);
 	border-radius: 5px;
-	background-color: var(--white);
+	background-color: var(--light);
 	color: #858796;
 }
 

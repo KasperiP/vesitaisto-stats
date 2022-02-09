@@ -1,5 +1,3 @@
-import { Connection } from 'mongoose';
-
 export type Player = {
 	_id: number;
 	uuid: string;

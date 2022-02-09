@@ -33,16 +33,10 @@
 	cursor: pointer;
 }
 
-.navbar h1 {
-	color: var(--title);
-	font-weight: 400;
-	cursor: pointer;
-}
-
 .navbar button {
 	padding: 10px 20px;
 	border-radius: 5px;
-	background-color: var(--blue);
+	background-color: var(--highlight);
 	color: var(--text);
 	font-weight: 600;
 	text-transform: uppercase;

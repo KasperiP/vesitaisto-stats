@@ -12,8 +12,6 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<StatsResponse | Error>
 ) {
-	await dbConnect();
-
 	let { sortBy, sortOrder, page, limit } = req.query;
 
 	if (
@@ -68,6 +66,9 @@ export default async function handler(
 	}
 	limit = limit ? limit : '10';
 
+	// Database connection
+	await dbConnect();
+
 	const parsedPage = parseInt(page);
 	const parsedLimit = parseInt(limit);
 
@@ -96,6 +97,7 @@ export default async function handler(
 			.sort({ [sortBy]: sortOrder === 'asc' ? 1 : -1 })
 			.skip(skipIndex)
 			.limit(parsedLimit);
+
 		askedCollection = playersCollection;
 	}
 	const totalPlayers = await Players.count();

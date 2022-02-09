@@ -7,18 +7,18 @@ body {
 }
 
 :root {
-	--blue: #007bff;
+	--highlight: #007bff;
 	--background: #f8f9fc;
-	--white: #fff;
+	--light: #fff;
 	--text: #fff;
 	--border: #e3e6f09e;
 	--title: #5a5c69;
 }
 
 [data-theme='dark'] {
-	--blue: #14161b;
+	--highlight: #14161b;
 	--background: #111216;
-	--white: rgb(39 42 51 / 20%);
+	--light: rgb(39 42 51 / 20%);
 	--text: #767d88;
 	--border: rgb(51 51 51 / 6.3%);
 	--title: #b1b1b1;
@@ -31,6 +31,12 @@ a {
 
 button {
 	border: none;
+	cursor: pointer;
+}
+
+h1 {
+	color: var(--title);
+	font-weight: 400;
 	cursor: pointer;
 }
 

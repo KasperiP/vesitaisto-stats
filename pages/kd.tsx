@@ -6,14 +6,12 @@ import LargeTable from '../components/LargeTable/LargeTable';
 import Navbar from '../components/Navbar/Navbar';
 import { StatsResponse } from '../types';
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
 const Kd: NextPage = () => {
 	const [current, setCurrent] = useState<number>(1);
 
 	const { data, error } = useSWR<StatsResponse, boolean>(
 		`/api/stats?page=${current}&sortBy=kd&limit=10&sortOrder=asc`,
-		fetcher
+		(url: string) => fetch(url).then((res) => res.json())
 	);
 
 	return (

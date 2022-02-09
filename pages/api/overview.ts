@@ -16,6 +16,7 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<StatsOverviewResponse>
 ) {
+	// Database connection
 	await dbConnect();
 
 	const data: Player[] = await Players.find({});
