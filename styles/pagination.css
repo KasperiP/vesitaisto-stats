@@ -70,7 +70,7 @@
 
 .rc-pagination-item:focus a,
 .rc-pagination-item:hover a {
-	color: var(--blue);
+	color: var(--title);
 }
 
 .rc-pagination-item-active {

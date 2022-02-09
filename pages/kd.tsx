@@ -12,7 +12,7 @@ const Kd: NextPage = () => {
 	const [current, setCurrent] = useState<number>(1);
 
 	const { data, error } = useSWR<StatsResponse, boolean>(
-		`/api/stats/?page=${current}&sortBy=kd&limit=10&sortOrder=asc`,
+		`/api/stats?page=${current}&sortBy=kd&limit=10&sortOrder=asc`,
 		fetcher
 	);
 

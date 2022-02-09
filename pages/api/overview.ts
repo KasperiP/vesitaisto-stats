@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Player } from '../../types';
-import { connect } from '../../utils/connection';
+import dbConnect from '../../utils/dbConnect';
+import Players from '../../models/PlayerModel';
 
 type StatsOverviewResponse = {
 	kills: Player[];
@@ -15,9 +16,9 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<StatsOverviewResponse>
 ) {
-	const { Players } = await connect(); // connect to database
+	await dbConnect();
 
-	const data: Player[] = await Players.find();
+	const data: Player[] = await Players.find({});
 
 	const topKills = data.sort((a, b) => b.kills - a.kills).slice(0, 10);
 	const topDeaths = data.sort((a, b) => b.deaths - a.deaths).slice(0, 10);
@@ -38,6 +39,7 @@ export default async function handler(
 		.sort((a, b) => b.levelrecord - a.levelrecord)
 		.slice(0, 10);
 
+	res.setHeader('Cache-Control', 'max-age=0, s-maxage=300');
 	res.status(200).send({
 		kills: topKills,
 		deaths: topDeaths,

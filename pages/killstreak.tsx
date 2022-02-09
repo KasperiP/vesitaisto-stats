@@ -12,7 +12,7 @@ const Killstreak: NextPage = () => {
 	const [current, setCurrent] = useState<number>(1);
 
 	const { data, error } = useSWR<StatsResponse, boolean>(
-		`/api/stats/?page=${current}&sortBy=killstreakrecord&limit=10&sortOrder=desc`,
+		`/api/stats?page=${current}&sortBy=killstreakrecord&limit=10&sortOrder=desc`,
 		fetcher
 	);
 

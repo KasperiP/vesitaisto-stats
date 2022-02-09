@@ -12,7 +12,7 @@ const Levelrecord: NextPage = () => {
 	const [current, setCurrent] = useState<number>(1);
 
 	const { data, error } = useSWR<StatsResponse, boolean>(
-		`/api/stats/?page=${current}&sortBy=levelrecord&limit=10&sortOrder=desc`,
+		`/api/stats?page=${current}&sortBy=levelrecord&limit=10&sortOrder=desc`,
 		fetcher
 	);
 

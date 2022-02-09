@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Player, StatsResponse } from '../../types';
-import { connect } from '../../utils/connection';
+import dbConnect from '../../utils/dbConnect';
+import Players from '../../models/PlayerModel';
 
 type Error = {
 	error: string;
@@ -11,7 +12,7 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<StatsResponse | Error>
 ) {
-	const { Players } = await connect(); // connect to database
+	await dbConnect();
 
 	let { sortBy, sortOrder, page, limit } = req.query;
 
@@ -73,7 +74,7 @@ export default async function handler(
 	const skipIndex = (parsedPage - 1) * parsedLimit;
 	let askedCollection;
 	if (sortBy === 'kd') {
-		const playersCollection: Player[] = await Players.find();
+		const playersCollection: Player[] = await Players.find({});
 		const sortedByKd = playersCollection.sort((a, b) => {
 			const bKd = b.deaths < 1 ? b.kills : b.kills / b.deaths;
 			const aKd = a.deaths < 1 ? a.kills : a.kills / a.deaths;
@@ -91,7 +92,7 @@ export default async function handler(
 				.reverse();
 		}
 	} else {
-		const playersCollection = await Players.find()
+		const playersCollection = await Players.find({})
 			.sort({ [sortBy]: sortOrder === 'asc' ? 1 : -1 })
 			.skip(skipIndex)
 			.limit(parsedLimit);
@@ -101,6 +102,7 @@ export default async function handler(
 	const totalPages = Math.ceil(totalPlayers / parsedLimit);
 	const currentPage = parseInt(page);
 
+	res.setHeader('Cache-Control', 'max-age=0, s-maxage=300');
 	res.status(200).send({
 		data: askedCollection,
 		pagination: {
