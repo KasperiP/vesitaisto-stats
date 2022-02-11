@@ -49,6 +49,7 @@ const LargeTable = ({ name, sortBy, current, setCurrent, data }: Props) => {
 													width={20}
 													height={20}
 													alt="Image"
+													unoptimized={true}
 												></Image>
 												<p>{player.player_name}</p>
 											</div>

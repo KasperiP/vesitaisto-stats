@@ -36,6 +36,7 @@ const Home: NextPage = () => {
 								width={20}
 								height={20}
 								alt="Image"
+								unoptimized={true}
 							></Image>
 							<p>{item.player_name}</p>
 						</div>
